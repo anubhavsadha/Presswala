@@ -4,6 +4,8 @@ These steps use Vercel for the app and Supabase (or Neon) for Postgres. Both hav
 
 ## 1. Database
 
+> Presswala has its **own Supabase account** (signed in with GitHub), separate from the Readiv one. Never point it at Readiv's database.
+
 1. Create a project on [Supabase](https://supabase.com) (region: Mumbai `ap-south-1`) or [Neon](https://neon.tech).
 2. Copy the Postgres connection string:
    - Supabase: Project Settings → Database → Connection string → **Transaction pooler** (port 6543). Prepared statements are switched off automatically for `pooler` URLs.
