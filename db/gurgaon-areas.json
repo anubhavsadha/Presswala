@@ -1,0 +1,20 @@
+[
+  { "name": "DLF Phase 1", "locality": "MG Road", "lat": 28.4720, "lng": 77.0930 },
+  { "name": "DLF Phase 2", "locality": "MG Road", "lat": 28.4880, "lng": 77.0890 },
+  { "name": "DLF Phase 3", "locality": "Cyber City", "lat": 28.4920, "lng": 77.0960 },
+  { "name": "DLF Phase 4", "locality": "Galleria", "lat": 28.4660, "lng": 77.0820 },
+  { "name": "DLF Phase 5", "locality": "Golf Course Road", "lat": 28.4500, "lng": 77.1000 },
+  { "name": "Sushant Lok 1", "locality": "Sector 43", "lat": 28.4630, "lng": 77.0750 },
+  { "name": "Sector 14", "locality": "Old Gurgaon", "lat": 28.4700, "lng": 77.0450 },
+  { "name": "Sector 15", "locality": "Old Gurgaon", "lat": 28.4590, "lng": 77.0370 },
+  { "name": "Sector 23", "locality": "Palam Vihar Road", "lat": 28.5130, "lng": 77.0390 },
+  { "name": "Sector 45", "locality": "Kanhai", "lat": 28.4450, "lng": 77.0650 },
+  { "name": "Sector 46", "locality": "Huda", "lat": 28.4370, "lng": 77.0570 },
+  { "name": "Sector 49", "locality": "Sohna Road", "lat": 28.4120, "lng": 77.0530 },
+  { "name": "Sector 56", "locality": "Golf Course Ext.", "lat": 28.4240, "lng": 77.1050 },
+  { "name": "Sector 57", "locality": "Golf Course Ext.", "lat": 28.4210, "lng": 77.0850 },
+  { "name": "South City 1", "locality": "Sector 41", "lat": 28.4600, "lng": 77.0640 },
+  { "name": "Nirvana Country", "locality": "Sector 50", "lat": 28.4140, "lng": 77.0700 },
+  { "name": "Palam Vihar", "locality": "Palam Vihar", "lat": 28.5100, "lng": 77.0200 },
+  { "name": "Malibu Towne", "locality": "Sector 47", "lat": 28.4270, "lng": 77.0450 }
+]

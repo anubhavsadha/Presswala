@@ -1,0 +1,11 @@
+[
+  { "code": "regular", "name": "Regular clothes (shirt, trouser, kurta, tee)", "price": 6, "is_regular": true },
+  { "code": "kids", "name": "Kids clothes", "price": 4, "is_regular": true },
+  { "code": "saree", "name": "Saree", "price": 25, "is_regular": false },
+  { "code": "suit", "name": "Suit / salwar set (3 pc)", "price": 18, "is_regular": false },
+  { "code": "bedsheet_single", "name": "Bedsheet (single)", "price": 12, "is_regular": false },
+  { "code": "bedsheet_double", "name": "Bedsheet (double)", "price": 20, "is_regular": false },
+  { "code": "curtain", "name": "Curtain (per panel)", "price": 25, "is_regular": false },
+  { "code": "blazer", "name": "Blazer / coat", "price": 40, "is_regular": false },
+  { "code": "lehenga", "name": "Lehenga", "price": 80, "is_regular": false }
+]
