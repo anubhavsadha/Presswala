@@ -8,7 +8,7 @@ These steps use Vercel for the app and Supabase (or Neon) for Postgres. Both hav
 
 1. Create a project on [Supabase](https://supabase.com) (region: Mumbai `ap-south-1`) or [Neon](https://neon.tech).
 2. Copy the Postgres connection string:
-   - Supabase: Project Settings → Database → Connection string → **Transaction pooler** (port 6543). Prepared statements are switched off automatically for `pooler` URLs.
+   - Supabase: open the project → **Connect** button in the top bar → Connection String → **Transaction pooler** (port 6543). Replace `[YOUR-PASSWORD]` with the database password. Prepared statements are switched off automatically for `pooler` URLs.
    - Neon: the pooled connection string.
 3. From your machine, create the tables and seed data:
 
