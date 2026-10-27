@@ -5,10 +5,13 @@ declare global {
   var __sql: postgres.Sql | undefined
 }
 
+const url = process.env.DATABASE_URL ?? ''
+const isLocal = /@(localhost|127\.0\.0\.1)[:/]/.test(url)
+
 // One pool per server process; reused across hot reloads in dev.
 export const sql =
   globalThis.__sql ??
-  postgres(process.env.DATABASE_URL!, {
+  postgres(url, {
     max: Number(process.env.DB_POOL_MAX ?? 5),
     idle_timeout: 20,
     onnotice: () => {},
@@ -21,7 +24,10 @@ export const sql =
       date: { to: 1082, from: [1082], serialize: (x: string) => x, parse: (x: string) => x },
     },
     transform: { undefined: null },
-    prepare: !process.env.DATABASE_URL?.includes('pooler'),
+    // Hosted databases (Supabase, Neon) expect TLS; a local Postgres usually has none.
+    ssl: isLocal ? false : 'require',
+    // Transaction poolers (Supabase :6543, Neon -pooler) don't support prepared statements.
+    prepare: !url.includes('pooler'),
   })
 
 if (process.env.NODE_ENV !== 'production') globalThis.__sql = sql

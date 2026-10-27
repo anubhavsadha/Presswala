@@ -8,7 +8,11 @@ import areas from '../db/gurgaon-areas.json' with { type: 'json' }
 import prices from '../db/default-prices.json' with { type: 'json' }
 
 loadEnv()
-const sql = postgres(process.env.DATABASE_URL, { onnotice: () => {} })
+const sql = postgres(process.env.DATABASE_URL, {
+  onnotice: () => {},
+  ssl: /@(localhost|127\.0\.0\.1)[:/]/.test(process.env.DATABASE_URL) ? false : 'require',
+  prepare: !process.env.DATABASE_URL.includes('pooler'),
+})
 
 for (const a of areas) {
   await sql`

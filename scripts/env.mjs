@@ -13,4 +13,9 @@ export function loadEnv() {
     console.error('DATABASE_URL is not set. Copy .env.example to .env and fill it in.')
     process.exit(1)
   }
+  if (/@db\.[^.]+\.supabase\.co/.test(process.env.DATABASE_URL)) {
+    console.error('DATABASE_URL uses the Supabase "Direct connection" host, which is IPv6-only and often unreachable.')
+    console.error('Use the Transaction pooler string instead: Supabase -> Connect -> Transaction pooler (port 6543).')
+    process.exit(1)
+  }
 }
