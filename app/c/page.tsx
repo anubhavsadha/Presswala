@@ -97,7 +97,7 @@ export default async function CustomerHome({ searchParams }: PageProps<'/c'>) {
           {bal.pending > 0 && <div className="text-xs text-amber-700">{rupees(bal.pending)} waiting for confirmation</div>}
           <div className="mt-2 flex gap-2">
             {bal.owed > 0 && pw.upi_id && (
-              <a href={upiLink(pw.upi_id, pw.name, bal.owed, 'Presswala khata')} className="btn-primary px-3 py-1.5 text-xs">Pay by UPI</a>
+              <a href={upiLink(pw.upi_id, pw.name, bal.owed, 'Istrify khata')} className="btn-primary px-3 py-1.5 text-xs">Pay by UPI</a>
             )}
             <Link href="/c/khata" className="btn-secondary px-3 py-1.5 text-xs">View khata</Link>
           </div>

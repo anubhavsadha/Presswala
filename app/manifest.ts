@@ -3,8 +3,8 @@ import type { MetadataRoute } from 'next'
 // Lets people "Add to Home Screen" so the site opens like an app.
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Presswala',
-    short_name: 'Presswala',
+    name: 'Istrify',
+    short_name: 'Istrify',
     description: 'Doorstep ironing from your colony presswala',
     start_url: '/login',
     display: 'standalone',

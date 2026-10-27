@@ -1,6 +1,6 @@
-# Presswala
+# Istrify™
 
-An aggregator web app connecting Gurgaon households with their colony presswala (ironing).
+**Istrify** ([istrify.in](https://istrify.in)) is an aggregator web app connecting Gurgaon households with their colony presswala (ironing).
 Customers book pickups or drops by slot, set weekly schedules, track orders, keep a khata and
 buy monthly plans. Presswalas get an optimised daily route, a counting-and-billing screen and a
 digital khata. The platform admin approves presswalas, manages areas and plans, and tracks commission.

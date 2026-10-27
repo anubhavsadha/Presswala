@@ -27,7 +27,7 @@ export default async function Khata() {
         {due > 0 && (
           <div className="mt-3 space-y-3">
             {pw.upi_id ? (
-              <a href={upiLink(pw.upi_id, pw.name, due, 'Presswala khata')} className="btn-primary w-full py-3">Pay {rupees(due)} by UPI</a>
+              <a href={upiLink(pw.upi_id, pw.name, due, 'Istrify khata')} className="btn-primary w-full py-3">Pay {rupees(due)} by UPI</a>
             ) : (
               <p className="text-sm text-stone-500">Your presswala has not added a UPI ID. Pay him in cash.</p>
             )}

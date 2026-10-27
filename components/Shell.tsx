@@ -14,8 +14,8 @@ export function Shell({ children, nav, title, userName, wide = false }: {
       <header className="sticky top-0 z-20 border-b border-stone-200 bg-white/90 backdrop-blur">
         <div className={`mx-auto flex items-center justify-between gap-3 px-4 py-3 ${wide ? 'max-w-6xl' : 'max-w-3xl'}`}>
           <Link href="/" className="flex items-center gap-2 font-bold">
-            <span className="grid size-8 place-items-center rounded-lg bg-brand-600 text-white">P</span>
-            <span>Presswala <span className="font-normal text-stone-500">· {title}</span></span>
+            <span className="grid size-8 place-items-center rounded-lg bg-brand-600 text-white">i</span>
+            <span>Istrify <span className="font-normal text-stone-500">· {title}</span></span>
           </Link>
           <nav className="hidden items-center gap-1 md:flex">
             {nav.map((n) => <NavLink key={n.href} {...n} variant="top" />)}

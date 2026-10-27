@@ -1,10 +1,10 @@
-# Deploying Presswala
+# Deploying Istrify
 
 These steps use Vercel for the app and Supabase (or Neon) for Postgres. Both have free tiers.
 
 ## 1. Database
 
-> Presswala has its **own Supabase account** (signed in with GitHub), separate from the Readiv one. Never point it at Readiv's database.
+> Istrify (codebase: Presswala) has its **own Supabase account** (signed in with GitHub), separate from the Readiv one. Never point it at Readiv's database.
 
 1. Create a project on [Supabase](https://supabase.com) (region: Mumbai `ap-south-1`) or [Neon](https://neon.tech).
 2. Copy the Postgres connection string:
@@ -57,3 +57,10 @@ curl -H "Authorization: Bearer $CRON_SECRET" https://your-domain/api/cron/schedu
 - [ ] Approve each presswala only after checking ID and stall location
 - [ ] Health check: `GET /api/health` returns `{"ok":true}`
 - [ ] Next phase: SMS OTP login, WhatsApp notifications, Razorpay
+
+## Custom domain: istrify.in (registered at GoDaddy)
+
+1. Vercel → Project → Settings → **Domains** → add `istrify.in` and `www.istrify.in`.
+2. GoDaddy → My Products → istrify.in → **DNS**: delete the default "Parked" A record, then add the records Vercel shows (usually A `@` → `76.76.21.21` and CNAME `www` → `cname.vercel-dns.com`).
+3. Wait for Vercel to show "Valid Configuration"; HTTPS is issued automatically.
+4. Set `SITE_URL=https://istrify.in` in Vercel environment variables.

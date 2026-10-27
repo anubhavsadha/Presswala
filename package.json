@@ -1,9 +1,9 @@
 {
-  "name": "presswala",
+  "name": "istrify",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Aggregator app connecting Gurgaon households with their local presswalas.",
+  "description": "Istrify: aggregator app connecting Gurgaon households with their local presswalas.",
   "engines": {
     "node": ">=20.9"
   },

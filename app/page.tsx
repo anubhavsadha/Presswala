@@ -13,7 +13,7 @@ export default async function Landing() {
     <div className="min-h-dvh bg-gradient-to-b from-brand-50 to-stone-50">
       <header className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
         <div className="flex items-center gap-2 font-bold">
-          <span className="grid size-9 place-items-center rounded-xl bg-brand-600 text-white">P</span> Presswala
+          <span className="grid size-9 place-items-center rounded-xl bg-brand-600 text-white">i</span> Istrify<sup className="text-[10px] font-normal text-stone-400">™</sup>
         </div>
         {session ? (
           <Link href={HOME_FOR_ROLE[session.role]} className="btn-primary">Open app</Link>
@@ -26,7 +26,7 @@ export default async function Landing() {
       </header>
 
       <section className="mx-auto max-w-5xl px-4 pb-12 pt-8 md:pt-16">
-        <p className="mb-3 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-700">Now in Gurgaon</p>
+        <p className="mb-3 inline-block rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-700">Istrify · Now in Gurgaon</p>
         <h1 className="max-w-2xl text-4xl font-extrabold tracking-tight md:text-5xl">
           Your colony presswala, <span className="text-brand-600">on your schedule.</span>
         </h1>
@@ -69,7 +69,7 @@ export default async function Landing() {
           </div>
         </div>
       </section>
-      <footer className="border-t border-stone-200 py-6 text-center text-xs text-stone-500">© {new Date().getFullYear()} Presswala</footer>
+      <footer className="border-t border-stone-200 py-6 text-center text-xs text-stone-500">© {new Date().getFullYear()} Istrify™ · istrify.in</footer>
     </div>
   )
 }

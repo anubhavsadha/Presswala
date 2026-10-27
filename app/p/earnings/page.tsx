@@ -35,7 +35,7 @@ export default async function Earnings() {
       <Card>
         <h2 className="font-semibold">Platform fee</h2>
         <p className="mt-1 text-sm text-stone-600">
-          {settings.commissionPct}% on order bills and {settings.subscriptionCommissionPct}% on monthly plans. Settle with the Presswala team weekly.
+          {settings.commissionPct}% on order bills and {settings.subscriptionCommissionPct}% on monthly plans. Settle with the Istrify team weekly.
         </p>
         <div className="mt-3 grid grid-cols-3 gap-2 text-center text-sm">
           <div><div className="text-xs text-stone-500">Total fee</div><div className="font-semibold">{rupees(dues.commission)}</div></div>
