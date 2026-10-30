@@ -15,6 +15,8 @@
     "db:migrate": "node scripts/migrate.mjs",
     "db:seed": "node scripts/seed.mjs",
     "db:setup": "node scripts/migrate.mjs && node scripts/seed.mjs",
+    "db:demo": "node scripts/seed.mjs --demo",
+    "db:demo:remove": "node scripts/remove-demo.mjs",
     "test": "node --test --experimental-strip-types --no-warnings tests/*.test.ts"
   },
   "dependencies": {

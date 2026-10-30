@@ -57,6 +57,13 @@ Demo logins (password `demo1234` unless noted):
 | Presswala (Sector 45, 46, Malibu Towne) | 9000000003 |
 | Households | 8100000001 … 8100000048 |
 
+Add or remove the demo accounts on any database (including production) at any time:
+
+```bash
+npm run db:demo          # creates the presswalas and households above (safe to re-run)
+npm run db:demo:remove   # deletes them and all their orders; real accounts stay
+```
+
 Checks: `npm run typecheck`, `npm test` (optimiser and billing unit tests), `npm run build`.
 
 ## Deploy

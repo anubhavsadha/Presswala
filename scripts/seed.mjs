@@ -1,5 +1,6 @@
 // Seeds Gurgaon areas, subscription plans and the admin account.
-// With SEED_DEMO=1 it also creates demo presswalas and households (password: demo1234).
+// With SEED_DEMO=1 (or `npm run db:demo`) it also creates demo presswalas and households
+// (password: demo1234). Remove them with `npm run db:demo:remove`.
 // Safe to re-run: existing rows are left alone.
 import bcrypt from 'bcryptjs'
 import postgres from 'postgres'
@@ -47,7 +48,7 @@ if (adminPhone && adminPassword) {
   console.log(`Admin: ${adminPhone}`)
 }
 
-if (process.env.SEED_DEMO === '1') {
+if (process.env.SEED_DEMO === '1' || process.argv.includes('--demo')) {
   const areaRows = await sql`SELECT id, name, lat, lng FROM areas`
   const byName = Object.fromEntries(areaRows.map((a) => [a.name, a]))
   const demoPresswalas = [
