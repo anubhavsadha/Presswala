@@ -1,9 +1,12 @@
+import { headers } from 'next/headers'
 import Link from 'next/link'
 import { getSession } from '@/lib/auth'
 import { HOME_FOR_ROLE } from '@/lib/session'
 
 export default async function Landing() {
   const session = await getSession()
+  // The Android app sends this marker; no point offering the APK inside the APK.
+  const inApp = ((await headers()).get('user-agent') ?? '').includes('IstrifyApp')
   const steps = [
     ['📅', 'Pick a day & slot', 'Choose a morning pickup slot, or drop clothes at the shop yourself. Set it once to repeat every week.'],
     ['👕', 'Clothes get ironed', 'Your colony presswala collects, counts and bills by item. ₹6 a piece, sarees and bedsheets as per his rate card.'],
@@ -36,6 +39,9 @@ export default async function Landing() {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="/register" className="btn-primary px-6 py-3 text-base">Book my presswala</Link>
           <Link href="/register?as=presswala" className="btn-secondary px-6 py-3 text-base">I am a presswala</Link>
+          {!inApp && (
+            <a href="/istrify.apk" download className="btn-ghost px-4 py-3 text-base">📱 Android app</a>
+          )}
         </div>
       </section>
 
